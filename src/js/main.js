@@ -10,6 +10,8 @@ Vue.component(Header.name,Header)
 import 'mint-ui/lib/style.css'
 //导入MUI样式
 import '../lib/mui/css/mui.min.css'
+//导入图标样式
+import '../lib/mui/css/icons-extra.css'
 //创建一个VUE实例
         var  vm=new Vue({
             el:'#app',
