@@ -38,6 +38,7 @@
 <style scoped>
 .App-container{
     padding-top: 60px;
+    padding-bottom: 50px;
     font-size: 40px;
     overflow-x: hidden;
 }

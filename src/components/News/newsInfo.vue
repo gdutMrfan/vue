@@ -1,0 +1,61 @@
+<template>
+    <div class="newsInfo-container">
+        <h1 class="title">{{newInfo.title}}</h1>
+        <p class="subTitle">
+            <span>发表时间：{{newInfo.time}}</span>
+            <span>点击{{newInfo.click}}数</span>
+        </p>
+        <hr>
+        <div class="content" v-html="newInfo.content"></div>
+    </div>
+</template>
+
+<script>
+    export default {
+       data(){
+           return{
+               id:this.$route.params.id,
+               newInfo:{}
+           }
+       },
+        created(){
+           this.getInfo()
+        },
+        methods:{
+           getInfo(){
+               this.$http.get("newListsData.json").then(result=>{
+                   if(result.ok==true){
+                       for(var i=0;i<result.body.newList.length;i++){
+                           if(result.body.newList[i].id==this.id){
+                               this.newInfo=result.body.newList[i]
+                           }
+                       }
+                   }
+               })
+           }
+        }
+    }
+</script>
+
+<style>
+.newsInfo-container .title{
+    font-size: 16px;
+    text-align: center;
+    padding: 0 10px;
+    color: red;
+    width: 100%;
+}
+.newsInfo-container .subTitle{
+    color: blue;
+    display: flex;
+    justify-content: space-between;
+}
+.content{
+    margin: 0;
+    font-size: 12px;
+    padding: 5px;
+}
+.content img{
+    width: 100%;
+}
+</style>
