@@ -4,10 +4,11 @@ import Vue from 'vue'
 //导入App组件import app from  './App.vue'
 import app from '../App.vue'
 //按需导入mint-UI中的组件
-import {Header,Swipe, SwipeItem} from 'mint-ui'
+import {Header,Swipe, SwipeItem,Button} from 'mint-ui'
 Vue.component(Header.name,Header)
 Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
+Vue.component(Button.name, Button)
 //导入Mint-UI样式
 import 'mint-ui/lib/style.css'
 //导入MUI样式

@@ -7,10 +7,13 @@
         </p>
         <hr>
         <div class="content" v-html="newInfo.content"></div>
+        <cmt-content :Id="this.id"></cmt-content>
+
     </div>
 </template>
 
 <script>
+    import comment from '../subComment/comment.vue'
     export default {
        data(){
            return{
@@ -33,6 +36,9 @@
                    }
                })
            }
+        },
+        components:{
+           "cmt-content":comment
         }
     }
 </script>
@@ -57,5 +63,8 @@
 }
 .content img{
     width: 100%;
+}
+.newsInfo-container hr{
+    margin: 5px 0px;
 }
 </style>
