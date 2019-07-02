@@ -2,11 +2,11 @@
     <div class="cmt-container">
         <h1>发表评论</h1>
         <hr>
-        <textarea placeholder="请输入评论内容（最多不超过120个字）" class="text"></textarea>
-        <mt-button type="primary" size="large">发表评论</mt-button>
+        <textarea placeholder="请输入评论内容（最多不超过120个字）" class="text" v-model="msg"></textarea>
+        <mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
         <div class="cmt-list">
-            <div class="cmt-item" v-for="(item,i) in comment" :key="item.user" >
-                <div class="cmt-title">第{{i+1}}楼&nbsp;&nbsp;用户：{{item.user}}&nbsp;&nbsp;发表时间：{{item.time}}</div>
+            <div class="cmt-item" v-for="(item,i) in comment" :key="i" >
+                <div class="cmt-title">第{{i+1}}楼&nbsp;&nbsp;用户：{{item.user}}&nbsp;&nbsp;发表时间：{{item.time | dateFormat}}</div>
                 <div class="cmt-content">{{item.content}}</div>
             </div>
         </div>
@@ -20,7 +20,8 @@
         data() {
             return {
                 comment:[],
-                tag:0
+                tag:0,
+                msg:''
 
             }
         },
@@ -49,9 +50,32 @@
             getMore(){
                 this.tag++
                 this.getComment()
+            },
+            postComment(){
+                if(this.msg.trim().length===0){
+                 return   Toast("评论内容不能为空")
+                }
+                var cmt={user:"匿名用户",time:new Date(),content:this.msg}
+                this.comment.unshift(cmt)
             }
         },
-        props:["Id"]
+        props:["Id"],
+        filters:{
+            'dateFormat':function (dateStr,pattern='') {
+                var dt = new Date(dateStr);
+                var y = dt.getFullYear();
+                var m = dt.getMonth().toString().padStart(2, "0");
+                var d = dt.getDate().toString().padStart(2, "0");
+                if (pattern.toLowerCase() == "yyyy-hh--dd") {
+                    return `${y}-${m}-${d}`;
+                } else {
+                    var h = dt.getHours().toString().padStart(2, "0");
+                    var min = dt.getMinutes().toString().padStart(2, "0");
+                    var sec = dt.getSeconds().toString().padStart(2, "0");
+                    return `${y}-${m}-${d} ${h}-${min}-${sec} `;
+                }
+            }
+        }
     }
 </script>
 
