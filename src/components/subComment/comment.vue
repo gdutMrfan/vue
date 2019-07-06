@@ -3,14 +3,14 @@
         <h1>发表评论</h1>
         <hr>
         <textarea placeholder="请输入评论内容（最多不超过120个字）" class="text" v-model="msg"></textarea>
-        <mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
+        <mt-button type="primary" size="large" @click="postComment" class="font">发表评论</mt-button>
         <div class="cmt-list">
             <div class="cmt-item" v-for="(item,i) in comment" :key="i" >
                 <div class="cmt-title">第{{i+1}}楼&nbsp;&nbsp;用户：{{item.user}}&nbsp;&nbsp;发表时间：{{item.time | dateFormat}}</div>
                 <div class="cmt-content">{{item.content}}</div>
             </div>
         </div>
-        <mt-button type="danger" size="large" @click="getMore">加载更多</mt-button>
+        <mt-button type="danger" size="large" @click="getMore" class="font">加载更多</mt-button>
     </div>
 </template>
 
@@ -81,27 +81,31 @@
 
 <style scoped>
 .cmt-container h1{
-    font-size: 18px;
+    font-size: 35px;
 }
 .cmt-container hr{
     margin: 5px 0px;
 }
 .cmt-container .text{
-    font-size: 12px;
+    font-size: 25px;
     height: 85px;
     margin: 5px;
 }
 .cmt-list .cmt-title{
-    font-size: 13px;
+    font-size: 25px;
     background-color:#cccccc;
     line-height: 30px;
 }
 .cmt-list .cmt-content{
-    font-size: 13px;
+    font-size: 25px;
     text-indent: 2em;
     line-height:30px
 }
 .cmt-container .cmt-list{
     margin: 5px 0;
 }
+    .font{
+        font-size: 25px;
+        height: 80px;
+    }
 </style>

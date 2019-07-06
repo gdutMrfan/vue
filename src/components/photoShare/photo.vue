@@ -91,7 +91,8 @@ li img[lazy=loading] {
 img{
    width: 100%;
    vertical-align: middle;
-    height: 250px;
+    height: 500px;
+    min-height: 500px;
 }
 .info{
     color: white;
@@ -99,13 +100,26 @@ img{
     position: absolute;
     bottom: 0;
     background-color: rgba(0,0,0,0.4);
-    max-height: 60px;
+    line-height:40px;
+    max-height: 300px;
+    width: 100%;
 }
 .info .info-title{
-    font-size: 14px;
+    font-size: 35px;
 
 }
 .info .info-body{
-    font-size: 12px;
+    font-size: 25px;
 }
+.mui-slider{
+    height: 80px;
+}
+.mui-scroll-wrapper,.mui-slider-indicator,.mui-segmented-control,.mui-segmented-control-inverted{
+    font-size: 40px;
+    margin-top: 20px;
+}
+.mui-control-item{
+    margin: 0 10px;
+}
+* { touch-action: pan-y; }
 </style>

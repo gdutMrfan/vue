@@ -10,7 +10,6 @@ Vue.component(Swipe.name, Swipe)
 Vue.component(SwipeItem.name, SwipeItem)
 Vue.component(Button.name, Button)*/
 import MintUi from 'mint-ui'
-import 'mint-ui/lib/style.css'
 Vue.use(MintUi)
 //导入Mint-UI样式
 import 'mint-ui/lib/style.css'

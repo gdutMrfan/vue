@@ -45,12 +45,20 @@
 
 <style scoped>
 .mui-table-view h1{
-        font-size: 16px;
+        font-size: 35px;
     }
 .mui-table-view .mui-ellipsis{
-       font-size: 12px;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       font-size: 25px;
        color: blue;
        display: flex;
        justify-content: space-between;
 }
+.mui-table-view-cell,.mui-media{
+    height: 100px;
+}
+    img{
+        height: 86px!important;
+    }
 </style>

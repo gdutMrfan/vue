@@ -7,6 +7,7 @@ import ShopCarContainer from '../components/tabbar/ShopcarContainer.vue'
 import newLists from  '../components/News/NewsLists.vue'
 import newsInfo from  '../components/News/newsInfo.vue'
 import photo from  '../components/photoShare/photo.vue'
+import GoodsList from '../components/goodsList/GoodsList.vue'
 var router=new VueRouter({
     routes:[
         {path:'/',redirect:'/home'},
@@ -16,7 +17,8 @@ var router=new VueRouter({
         {path:'/shopCar',component:ShopCarContainer},
         {path:'/home/newLists',component:newLists},
         {path:'/home/newsInfo/:id',component:newsInfo},
-        {path:'/home/photoShare',component:photo}
+        {path:'/home/photoShare',component:photo},
+        {path:'/home/goodsList',component:GoodsList}
 
     ],
     linkActiveClass:'mui-active'//覆盖默认的路由高亮的类，router-link-active

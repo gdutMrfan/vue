@@ -45,7 +45,7 @@
 
 <style>
 .newsInfo-container .title{
-    font-size: 16px;
+    font-size: 35px;
     text-align: center;
     padding: 0 10px;
     color: red;
@@ -55,14 +55,17 @@
     color: blue;
     display: flex;
     justify-content: space-between;
+    font-size: 25px;
 }
 .content{
     margin: 0;
-    font-size: 12px;
+    font-size: 25px;
+    line-height: 40px;
     padding: 5px;
 }
 .content img{
     width: 100%;
+    margin-bottom: 10px;
 }
 .newsInfo-container hr{
     margin: 5px 0px;

@@ -2,26 +2,26 @@
 
    <div class="App-container">
        <!--头部区域-->
-       <mt-header fixed title="vue项目"></mt-header>
+       <mt-header fixed title="vue项目" class="header"></mt-header>
        <!--主体区域-->
       <transition>
           <router-view></router-view>
       </transition>
        <!--页脚区域-->
        <nav class="mui-bar mui-bar-tab">
-           <router-link class="mui-tab-item" to="/home">
+           <router-link class="mui-tab-item-lib" to="/home">
                <span class="mui-icon mui-icon-home"></span>
                <span class="mui-tab-label">首页</span>
            </router-link>
-           <router-link  class="mui-tab-item" to="/member">
+           <router-link  class="mui-tab-item-lib " to="/member">
                <span class="mui-icon mui-icon-contact"></span>
                <span class="mui-tab-label">会员</span>
            </router-link >
-           <router-link  class="mui-tab-item" to="/shopCar">
+           <router-link  class="mui-tab-item-lib " to="/shopCar">
                <span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge ">0</span></span>
                <span class="mui-tab-label">购物车</span>
            </router-link >
-           <router-link  class="mui-tab-item" to="/search">
+           <router-link  class="mui-tab-item-lib" to="/search">
                <span class="mui-icon mui-icon-search"></span>
                <span class="mui-tab-label">搜索</span>
            </router-link >
@@ -37,13 +37,13 @@
 
 <style scoped>
 .App-container{
-    padding-top: 60px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 120px;
     font-size: 40px;
     overflow-x: hidden;
 }
-.mint-header{
-    height: 60px;
+.header{
+    height: 100px;
     font-size: 40px;
 }
 .v-enter{
@@ -61,6 +61,49 @@
 }
 .mint-header{
     z-index: 99!important;
+}
+.mui-bar-tab{
+    height: 120px;
+}
+.mui-bar-tab .mui-tab-item-lib .mui-icon~.mui-tab-label{
+    font-size: 30px;
+    overflow: visible;
+    display: block;
+    text-overflow: ellipsis;
+
+}
+.mui-bar-tab .mui-tab-item-lib .mui-icon  {
+    width: 50px;
+    height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.mui-bar .mui-icon {
+    font-size: 60px;
+    position: relative;
+    z-index: 20;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.mui-bar-tab .mui-tab-item-lib.mui-active{
+    color: #007aff;
+}
+.mui-bar-tab .mui-tab-item-lib{
+    display: table-cell;
+    overflow: hidden;
+    width: 1%;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #929292;
+}
+.mui-bar-tab .mui-tab-item-lib .mui-icon{
+    width: 50px;
+    height: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 </style>
