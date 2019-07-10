@@ -1,0 +1,13 @@
+{
+  "status": "0",
+  "goodsInfo": [
+    {"url": "../../images/苹果XS.jpg","title": "苹果XS","nPrice": "7999","oPrice": "8099","id": "0","GN": "100000287117","GT": "2018-09","GS": "200"},
+    {"url": "../../images/苹果XR.jpg","title": "苹果XR","nPrice": "5499","oPrice": "5699","id": "1","GN": "100000287115","GT": "2018-10","GS": "80"},
+    {"url": "../../images/I8.jpg","title": "苹果8","nPrice": "4399","oPrice": "4599","id": "2","GN": "5089267","GT": "2017-09","GS": "60"},
+    {"url": "../../images/P30.jpg","title": "华为P30","nPrice": "3988","oPrice": "4088","id": "3","GN": "100004404920","GT": "2019-04","GS": "1000"},
+    {"url": "../../images/P30P.jpg","title": "华为P30 Pro","nPrice": "5488","oPrice": "5688","id": "4","GN": "100004404944","GT": "2019-04","GS": "2000"},
+    {"url": "../../images/N5I.jpg","title": "华为nova 5I","nPrice": "2199","oPrice": "2399","id": "5","GN": "100003774677","GT": "2019-06","GS": "800"},
+    {"url": "../../images/KXO.jpg","title": "卡西欧男士运动手表","nPrice": "3299","oPrice": "3699","id": "6","GN": "1150658","GT": "2019-02","GS": "100"},
+    {"url": "../../images/库里6.jpg","title": "库里6篮球鞋","nPrice": "1199","oPrice": "1299","id": "7","GN": "41618110187","GT": "2019-03","GS": "1000"}
+]
+}

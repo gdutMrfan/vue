@@ -104,7 +104,7 @@
 .cmt-container .cmt-list{
     margin: 5px 0;
 }
-    .font{
+.font{
         font-size: 25px;
         height: 80px;
     }
